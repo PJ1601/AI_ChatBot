@@ -9,7 +9,10 @@ media
 # Environments 
 .venv 
 .env
+env/
+venv/
+ENV/
 
-.vscode
-botenv
+.vscode/
+botenv/
 pyvenv.cfg
