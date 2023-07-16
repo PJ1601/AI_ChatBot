@@ -11,9 +11,9 @@ media
 .env/
 /env/
 /venv/
-ENV/
+.env
 
 .vscode
 /.vscode/
-/botenv/
+botenv/
 pyvenv.cfg
