@@ -26,7 +26,7 @@ The AI Chatbot is a project developed in Python and Django, designed to provide 
 
 **Usage**
 
-1. Access the chatbot interface at `[http://127.0.0.1:8000/chatbot/](http://127.0.0.1:8000/chatbot/`.
+1. Access the chatbot interface at `http://localhost:8000/chatbot`.
 2. Input your query in the provided text box and click 'Submit'.
 3. The chatbot will analyze the query and provide a context-specific response.
 
