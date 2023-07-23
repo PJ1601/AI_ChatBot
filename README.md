@@ -1,20 +1,47 @@
-# AI_ChatBot
+**AI Chatbot with OpenAI API**
 
-## Quick Start
+![Chatbot](chatbot_image.png)
 
-Polls is a simple Django app to conduct Web-based polls. For each question, visitors can choose between a fixed number of answers.
+**Overview**
 
-1. Add `polls` to your `INSTALLED_APPS` setting like this:
-<pre>
-INSTALLED_APPS = [  
-        ...  
-        'polls',  
-    ] </pre>
-2. Include the polls URLconf in your project `urls.py` like this:
-   `
-      path('polls/', include('polls.urls')).`
-3. Run `python manage.py migrate` to create the polls models.
+The AI Chatbot is a project developed in Python and Django, designed to provide dynamic and contextually relevant responses to user queries. Leveraging the power of OpenAI API, this chatbot offers solutions and assistance to users, addressing their questions and problems.
 
-4. Start the development server and visit [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) to create a poll (you'll need the Admin app enabled).
+**Features**
 
-5. Visit [http://127.0.0.1:8000/polls/](http://127.0.0.1:8000/polls/) to participate in the poll.
+- Utilizes Python and Django framework for robust development.
+- Integrates SQLite3 database for efficient data storage.
+- Employs OpenAI API with two models:
+  - text-davinci-003 for text completion
+  - gpt-4 for conversational engagement
+- Implements async views in Django for enhanced performance.
+- Utilizes JsonResponse to return responses as JSON data.
+
+**Installation**
+
+1. Clone the repository: `git clone https://github.com/username/ai-chatbot.git`
+2. Install required packages: `pip install -r requirements.txt`
+3. Set up OpenAI API credentials in `./chatbot/.env`.
+4. Run `python manage.py migrate` to create the chat_bot models.
+5. Run the Django development server: `python manage.py runserver`
+
+**Usage**
+
+1. Access the chatbot interface at `[http://127.0.0.1:8000/chatbot/](http://127.0.0.1:8000/chatbot/`.
+2. Input your query in the provided text box and click 'Submit'.
+3. The chatbot will analyze the query and provide a context-specific response.
+
+**Contributing**
+
+Contributions are welcome! Please create a pull request for any improvements or bug fixes.
+
+**License**
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+**Disclaimer**
+
+This chatbot is powered by OpenAI API, and its responses are based on the capabilities and limitations of the models used. While it strives to offer helpful and accurate information, it may not always provide definitive answers. Use the chatbot responsibly and verify critical information when needed.
+
+![OpenAI Logo](openai_logo.png)
+
+_This project is not officially affiliated with or endorsed by OpenAI._
