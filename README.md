@@ -18,7 +18,7 @@ The AI Chatbot is a project developed in Python and Django, designed to provide 
 
 **Installation**
 
-1. Clone the repository: `git clone https://github.com/username/ai-chatbot.git`
+1. Clone the repository: `git clone https://github.com/PJ1601/AI_ChatBot.git`
 2. Install required packages: `pip install -r requirements.txt`
 3. Set up OpenAI API credentials in `./chatbot/.env`.
 4. Run `python manage.py migrate` to create the chat_bot models.
