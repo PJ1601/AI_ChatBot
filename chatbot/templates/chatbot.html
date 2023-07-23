@@ -81,18 +81,8 @@
     {% endif %}
     <div class="card-body messages-box">
       <ul class="list-unstyled messages-list">
-        <!-- <li class="message received">
-          <div class="message-text">
-            <div class="message-sender">
-              <b>AI Chatbot</b>
-            </div>
-            <div class="message-content">
-              Hi {{user.username}}, I am your AI Chatbot, you can ask me anything.
-            </div>
-          </div>
-        </li> -->
 
-        {% for chat in chats %} {% if chat.user == request.user %}
+        {% for chat in chats %}{% if chat.user == user %}
 
         <li class="message sent">
           <div class="message-text">
@@ -112,20 +102,20 @@
           </div>
         </li>
 
-        {% endif %} {% endfor %}
+        {% endif %}{% endfor %}
       </ul>
     </div>
     <br /><br />
     <br /><br />
     <br /><br />
   </div>
-  <form class="message-form">
-    {%csrf_token%}
+  <form class="message-form" method="post" action="{% url 'chatbot' %}">
+    {% csrf_token %}
     <div class="input-group">
-      <input
-        type="text"
-        class="form-control message-input"
-        placeholder="Type your message..."
+      <input type="text" 
+             class="form-control message-input" 
+             placeholder="Type your message..." 
+             name="message" 
       />
       <div class="input-group-append">
         <button type="submit" class="btn btn-primary btn-send">Send</button>

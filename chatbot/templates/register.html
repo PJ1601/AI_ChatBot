@@ -66,6 +66,17 @@
     border: 1px solid #f5c6cb;
     border-radius: 4px;
   }
+  .login-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .login-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  .login-link a:hover {
+    text-decoration: underline;
+  }
 </style>
 {% endblock %} 
 
@@ -121,6 +132,9 @@
         </div>
         <button type="submit">Register</button>
       </form>
+      <div class="login-link">
+        Don't have an account? <a href="{% url 'login' %}">Login</a>
+      </div>
     </div>
   </div>
 </div>

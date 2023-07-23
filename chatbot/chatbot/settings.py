@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "daphne",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -55,6 +56,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "chatbot.urls"
+SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
 
 TEMPLATES = [
     {
@@ -72,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "chatbot.wsgi.application"
+ASGI_APPLICATION = "chatbot.asgi.application"
 
 
 # Database
